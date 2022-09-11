@@ -1,7 +1,13 @@
 export interface PlayCell {
-  color: 'red' | 'blue' | 'green' | 'yellow';
+  color: "red" | "blue" | "green" | "yellow";
   checked: boolean;
-  rowIndex: number;
+  id: number;
+  parentId: number;
+}
+
+export interface PlayRow {
+  id: number;
+  children: PlayCell[];
 }
 
 export enum Colors {
@@ -9,5 +15,5 @@ export enum Colors {
   blue,
   green,
   yellow,
+  purple,
 }
-
